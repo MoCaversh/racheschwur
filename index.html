@@ -302,7 +302,7 @@
 
     .hero-visual {
       position: relative;
-      min-height: 760px;
+      min-height: 610px;
     }
 
     .grid-bg {
@@ -319,14 +319,13 @@
 
     .dashboard {
       position: absolute;
-      inset: 24px 0 0 18px;
+      inset: 52px 0 0 30px;
       border-radius: 28px;
       overflow: hidden;
       background: linear-gradient(180deg, rgba(15,23,42,.96), rgba(9,14,31,.96));
       border: 1px solid rgba(255,255,255,.08);
       box-shadow: var(--shadow);
       backdrop-filter: blur(20px);
-      max-height: 680px;
     }
 
     .dashboard::before {
@@ -379,10 +378,10 @@
 
     .dashboard-body {
       display: grid;
-      grid-template-columns: 1.08fr .92fr;
+      grid-template-columns: 1.1fr .9fr;
       gap: 18px;
       padding: 20px;
-      max-height: 610px;
+      max-height: 500px;
       overflow-y: auto;
       scrollbar-width: thin;
       scrollbar-color: rgba(139,92,246,.65) rgba(255,255,255,.06);
@@ -445,33 +444,6 @@
       position: relative;
       overflow: hidden;
     }
-
-    .chart-legend {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-
-    .legend-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .legend-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    .legend-dot.cyan { background: var(--cyan); }
-    .legend-dot.purple { background: var(--primary); }
-    .legend-dot.green { background: var(--green); }
 
     .chart svg {
       position: absolute;
@@ -875,16 +847,7 @@
       }
 
       .hero-visual {
-        min-height: 840px;
-      }
-
-      .dashboard {
-        inset: 20px 0 0 0;
-        max-height: 760px;
-      }
-
-      .dashboard-body {
-        max-height: 690px;
+        min-height: 700px;
       }
 
       .floating-card.one { right: 10px; }
@@ -927,16 +890,15 @@
       }
 
       .hero-visual {
-        min-height: 980px;
+        min-height: 760px;
       }
 
       .dashboard {
         inset: 24px 0 0 0;
-        max-height: 900px;
       }
 
       .dashboard-body {
-        max-height: 820px;
+        max-height: 540px;
       }
 
       .floating-card.one,
@@ -1021,16 +983,8 @@
         font-size: 16px;
       }
 
-      .hero-visual {
-        min-height: 1040px;
-      }
-
-      .dashboard {
-        max-height: 950px;
-      }
-
       .dashboard-body {
-        max-height: 870px;
+        max-height: 500px;
         padding: 16px;
       }
 
@@ -1163,7 +1117,7 @@
                 <div class="panel-header">
                   <div>
                     <strong>Satış Performansı</strong>
-                    <span>Script görüntülenme, tıklama ve dönüşüm paneli</span>
+                    <span>Script görüntülenme ve dönüşüm paneli</span>
                   </div>
                   <span class="badge">AI View</span>
                 </div>
@@ -1182,11 +1136,6 @@
                     <path d="M0 180 C60 168, 100 130, 150 136 C210 144, 238 90, 300 92 C360 96, 396 44, 450 56 C504 68, 546 18, 600 28 L600 220 L0 220 Z" fill="url(#fillGlow)" opacity="0.65"></path>
                     <path d="M0 180 C60 168, 100 130, 150 136 C210 144, 238 90, 300 92 C360 96, 396 44, 450 56 C504 68, 546 18, 600 28" fill="none" stroke="url(#lineGlow)" stroke-width="5" stroke-linecap="round"></path>
                   </svg>
-                </div>
-                <div class="chart-legend">
-                  <span class="legend-item"><span class="legend-dot cyan"></span> Görüntülenme</span>
-                  <span class="legend-item"><span class="legend-dot purple"></span> Satın alma niyeti</span>
-                  <span class="legend-item"><span class="legend-dot green"></span> Tekrar ziyaret</span>
                 </div>
 
                 <div class="mini-grid">
@@ -1207,100 +1156,9 @@
                     <span>Hızlı teslimat ve destek yapısı</span>
                   </div>
                 </div>
-
-                <div class="mini-grid" style="margin-top:12px;">
-                  <div class="mini-box">
-                    <strong>12.4K</strong>
-                    <span>Aylık toplam ürün görüntülenmesi</span>
-                  </div>
-                  <div class="mini-box">
-                    <strong>31%</strong>
-                    <span>Hero bölümünden ürünlere geçiş oranı</span>
-                  </div>
-                  <div class="mini-box">
-                    <strong>89%</strong>
-                    <span>Mobil uyumlu deneyim puanı</span>
-                  </div>
-                  <div class="mini-box">
-                    <strong>24 ms</strong>
-                    <span>Hızlı tepki veren arayüz hissi</span>
-                  </div>
-                </div>
               </div>
 
               <div class="right-panel">
-                <div class="panel-header">
-                  <div>
-                    <strong>Popüler Ürünler</strong>
-                    <span>Öne çıkan dijital ürünler ve canlı katalog görünümü</span>
-                  </div>
-                  <span class="badge">Top Picks</span>
-                </div>
-
-                <div class="product-list">
-                  <div class="product-line">
-                    <div>
-                      <strong>Neural Admin Panel</strong>
-                      <span>Modern dashboard + auth + analytics</span>
-                    </div>
-                    <div class="price-tag">$49</div>
-                  </div>
-                  <div class="product-line">
-                    <div>
-                      <strong>Quantum Store UI</strong>
-                      <span>E-commerce storefront + product grid</span>
-                    </div>
-                    <div class="price-tag">$69</div>
-                  </div>
-                  <div class="product-line">
-                    <div>
-                      <strong>Vision Portfolio Kit</strong>
-                      <span>Creative developer portfolio system</span>
-                    </div>
-                    <div class="price-tag">$39</div>
-                  </div>
-                  <div class="product-line">
-                    <div>
-                      <strong>Aether Login Pack</strong>
-                      <span>Auth screens + glassmorphism UI set</span>
-                    </div>
-                    <div class="price-tag">$29</div>
-                  </div>
-                  <div class="product-line">
-                    <div>
-                      <strong>Nova Landing Suite</strong>
-                      <span>Marketing page + animated CTA blocks</span>
-                    </div>
-                    <div class="price-tag">$59</div>
-                  </div>
-                  <div class="product-line">
-                    <div>
-                      <strong>Orbit SaaS Frontend</strong>
-                      <span>Clean startup UI + pricing + FAQ flow</span>
-                    </div>
-                    <div class="price-tag">$79</div>
-                  </div>
-                </div>
-
-                <div class="mini-grid" style="margin-top:14px;">
-                  <div class="mini-box">
-                    <strong>AI Match</strong>
-                    <span>Kullanıcı ilgisine göre script vitrinleme mantığı</span>
-                  </div>
-                  <div class="mini-box">
-                    <strong>Secure UI</strong>
-                    <span>Güven veren premium ürün sunumu</span>
-                  </div>
-                </div>
-
-                <div class="mini-box" style="margin-top:12px;">
-                  <strong style="font-size:16px;">Catalyst Feed</strong>
-                  <span style="display:block;margin-top:8px;line-height:1.7;">
-                    Yeni yüklenen scriptler, popüler kategoriler, dönüşüm odaklı CTA analizleri ve mağaza içi premium yerleşim önerileri bu panelde gösterilebilir.
-                    Sağ panel artık daha detaylı, daha dolu ve aşağı kaydırıldığında ek veriler göstermeye uygun yapıdadır.
-                  </span>
-                </div>
-              </div>
                 <div class="panel-header">
                   <div>
                     <strong>Popüler Ürünler</strong>
@@ -1338,10 +1196,36 @@
                     </div>
                     <div class="price-tag">$29</div>
                   </div>
+                  <div class="product-line">
+                    <div>
+                      <strong>Nova Landing Suite</strong>
+                      <span>Animated CTA blocks + hero sections</span>
+                    </div>
+                    <div class="price-tag">$59</div>
+                  </div>
+                  <div class="product-line">
+                    <div>
+                      <strong>Orbit SaaS Frontend</strong>
+                      <span>Startup UI + pricing + clean sections</span>
+                    </div>
+                    <div class="price-tag">$79</div>
+                  </div>
+                  <div class="product-line">
+                    <div>
+                      <strong>Pulse Auth System</strong>
+                      <span>Login, register and password flow UI</span>
+                    </div>
+                    <div class="price-tag">$35</div>
+                  </div>
+                  <div class="product-line">
+                    <div>
+                      <strong>Vertex Dashboard Pack</strong>
+                      <span>Charts, widgets and modular admin blocks</span>
+                    </div>
+                    <div class="price-tag">$89</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
           <div class="floating-card one">
             <div class="label">Featured Interface</div>
